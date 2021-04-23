@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="d-flex">
+    <div class="align-self-center">
+      <img class="img-fluid w-25" src="assets/img/crud.png">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3" *ngFor="let produto of listaProdutos">
+
+      <app-card-produto
+        id={{produto.id}}
+        nome={{produto.nome}}
+        [promocao] = produto.promocao
+        inicio = {{produto.inicio}}
+        preco = {{produto.preco}}
+        >
+      </app-card-produto>
+
+
+    </div>
+  </div>
+</div>

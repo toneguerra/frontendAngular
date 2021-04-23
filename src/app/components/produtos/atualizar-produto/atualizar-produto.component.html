@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>
+    Atualizar Produto
+  </h1>
+  <hr>
+  <form>
+
+    <div class="form-group row">
+      <label for="nome" class="col-sm-2 col-form-label">Nome do Curso</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="txtNome" [(ngModel)]="produto.nome" placeholder="Digite o nome do curso" >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="incio" class="col-sm-2 col-form-label">Data de Início</label>
+      <div class="col-sm-3">
+        <input type="date" class="form-control" name="txtInicio" [(ngModel)]="produto.inicio">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="valor" class="col-sm-2 col-form-label">Valor</label>
+      <div class="col-sm-3">
+        <input type="number" class="form-control" name="txtValor" [(ngModel)]="produto.preco" placeholder="0.00">
+      </div>
+    </div>
+
+    <hr>
+
+    <button class="btn btn-primary col-sm-6 btn-block" (click)="salvarProduto()">Salvar</button>
+  </form>
+
+  <hr>
+
+  <div class="card border-primary shadow-lg">
+    <div class="card-body">
+      <h2>Conferir Dados:</h2>
+      <p>Nome do Curso: {{produto.nome}}</p>
+      <p>Data de Início: {{produto.inicio | date:"shortDate"}}</p>
+      <p>Valor do Curso: {{produto.preco | currency:"BRL"}}</p>
+    </div>
+
+  </div>
+</div>
+
+

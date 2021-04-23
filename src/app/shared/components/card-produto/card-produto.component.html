@@ -1,0 +1,12 @@
+<div class="card border-dark" style="width: 18rem;">
+  <img src="assets/produtos/{{id}}.png" class="card-img-top img-thumbnail">
+  <div class="card-img-overlay  d-flex">
+    <p *ngIf=promocao class="align-self-center alert alert-danger shadow">PROMOÇÃO</p>
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">{{nome}}</h5>
+    <p class="card-text">Data de início: {{inicio | date:'shortDate'}}</p>
+    <a href="#" class="btn btn-primary btn-block">{{preco | currency:'BRL'}}</a>
+  </div>
+</div>
