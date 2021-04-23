@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { IProduto } from './../model/IProduto.module';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -11,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ProdutosService {
 
-  private URL: string = "http://localhost:3000/produtos";
+  private URL: string = environment.URL + '/produtos'; //"http://localhost:3000/produtos";
 
   constructor(  private http: HttpClient, private toastr: ToastrService) { }
 

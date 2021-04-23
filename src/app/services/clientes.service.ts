@@ -4,13 +4,14 @@ import { Observable, EMPTY } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientesService {
 
-  private URL: string = "http://localhost:3000/clientes";
+  private URL: string = environment.URL + '/clientes'; //"http://localhost:3000/clientes";
 
   constructor(  private http: HttpClient, private toastr: ToastrService) { }
 
